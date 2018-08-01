@@ -14,6 +14,8 @@ var express     = require("express"),
 var commentRoutes    = require("./routes/comments"),
     campgroundRoutes = require("./routes/computers"),
     indexRoutes      = require("./routes/index")
+
+console.log(process.env.DATABASEURL);
  
 mongoose.connect('mongodb://localhost:27017/xoticDemo', { useNewUrlParser: true });
 
