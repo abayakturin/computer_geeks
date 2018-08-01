@@ -15,9 +15,9 @@ var commentRoutes    = require("./routes/comments"),
     campgroundRoutes = require("./routes/computers"),
     indexRoutes      = require("./routes/index")
 
-console.log(process.env.DATABASEURL);
+mongoose.connect(process.env.DATABASEURL, { useNewUrlParser: true });
  
-mongoose.connect('mongodb://localhost:27017/xoticDemo', { useNewUrlParser: true });
+// mongoose.connect('mongodb://localhost:27017/xoticDemo', { useNewUrlParser: true });
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
