@@ -1,0 +1,32 @@
+<% include ../partials/header %> 
+
+ <div class="container">
+     <header class="jumbotron" style="background-color:white">
+         <div class="container">
+             <h2>"It's easier to add things on to a PC than it's ever been before. It's one click, and boom, it comes down."</h2>
+             <h3>-Bill Gates</h3>
+             <p>Check the cool rigs created by other users, or add your own build!</p>
+             <p>
+                <a class="btn btn-default btn-large" href="/computers/new">Add a new computer configuration</a>
+             </p>
+         </div>
+     </header>
+     
+     <div class="row text-center" style="display:flex; flex-wrap: wrap;">
+        <% campgrounds.forEach(function(campground){ %>
+            <div class="col-md-3 col-sm-6">
+                <div class="thumbnail" style="border: 0">
+                   <img src="<%= campground.image %>">
+                   <div class="caption">
+                       <h4><%= campground.name %> - <%= campground.price%></h4>
+                   </div>
+                   <p>
+                       <a href="/computers/<%= campground._id %>" class="btn btn-default">More Info</a>
+                   </p>
+                </div>
+            </div>
+        <% }); %>
+    </div>
+</div>
+
+<% include ../partials/footer %>
