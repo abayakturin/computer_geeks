@@ -16,6 +16,8 @@ var commentRoutes    = require("./routes/comments"),
     indexRoutes      = require("./routes/index")
 
 mongoose.connect(process.env.DATABASEURL, { useNewUrlParser: true });
+
+//mongodb://abay:akturin1@ds151508.mlab.com:51508/computers
  
 // mongoose.connect('mongodb://localhost:27017/xoticDemo', { useNewUrlParser: true });
 
