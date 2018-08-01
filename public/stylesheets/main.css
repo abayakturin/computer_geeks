@@ -24,3 +24,9 @@ html {
 	height: 100%;
 }
 
+#info{
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    font-size: 18px;
+}
