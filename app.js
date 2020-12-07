@@ -15,13 +15,9 @@ var commentRoutes    = require("./routes/comments"),
     campgroundRoutes = require("./routes/computers"),
     indexRoutes      = require("./routes/index")
 
-var DATABASEURL = 'mongodb+srv://computers:<Qi0HrVmGXVqHZkQY>@computergeeks.9hdzz.mongodb.net/<computers>?retryWrites=true&w=majority';
+var DATABASEURL = '';
 
 mongoose.connect(DATABASEURL, { useNewUrlParser: true });
-
-// mongodb://abay:akturin1@ds151508.mlab.com:51508/computers
- 
-// mongoose.connect('mongodb://localhost:27017/xoticDemo', { useNewUrlParser: true });
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
