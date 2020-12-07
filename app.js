@@ -15,7 +15,9 @@ var commentRoutes    = require("./routes/comments"),
     campgroundRoutes = require("./routes/computers"),
     indexRoutes      = require("./routes/index")
 
-mongoose.connect(${process.env.DATABASEURL}, { useNewUrlParser: true });
+var dbString = "mongodb+srv://computers:<Qi0HrVmGXVqHZkQY>@computergeeks.9hdzz.mongodb.net/<computers>?retryWrites=true&w=majority";
+
+mongoose.connect(dbString, { useNewUrlParser: true });
 
 // mongodb://abay:akturin1@ds151508.mlab.com:51508/computers
  
