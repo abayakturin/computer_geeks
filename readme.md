@@ -1,2 +1,4 @@
-A simple website demo for XOTIC PC where you can store data, such as the price, year
-for various models of PCs with their components.
+abaydemo.herokuapp.com
+• Users can start their own accounts, post custom PC configurations, delete them, and leave comments
+• Express, NodeJS, Passport, MongoDB, REST API
+• Authentication and user data storage
