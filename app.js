@@ -15,9 +15,7 @@ var commentRoutes    = require("./routes/comments"),
     campgroundRoutes = require("./routes/computers"),
     indexRoutes      = require("./routes/index")
 
-var DATABASEURL = 'mongodb+srv://computers:<Qi0HrVmGXVqHZkQY>@computergeeks.9hdzz.mongodb.net/<computers>?retryWrites=true&w=majority';
-
-mongoose.connect(DATABASEURL, { useNewUrlParser: true });
+mongoose.connect(${process.env.DATABASEURL}, { useNewUrlParser: true });
 
 // mongodb://abay:akturin1@ds151508.mlab.com:51508/computers
  
@@ -55,5 +53,5 @@ app.use("/computers/:id/comments", commentRoutes);
 
 
 app.listen(process.env.PORT, process.env.IP, function(){
-   console.log("The Computer Geeks server has started!");
+   console.log("The Computer Geeks Server Has Started!");
 });
