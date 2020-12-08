@@ -19,10 +19,6 @@ var dbString = "mongodb+srv://admin:admin@computergeeks.9hdzz.mongodb.net/comput
 
 mongoose.connect(dbString, { useNewUrlParser: true });
 
-// mongodb://abay:akturin1@ds151508.mlab.com:51508/computers
- 
-// mongoose.connect('mongodb://localhost:27017/xoticDemo', { useNewUrlParser: true });
-
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
