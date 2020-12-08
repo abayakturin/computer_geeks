@@ -1,4 +1,4 @@
-<a href="http://abaydemo.herokuapp.com/">Website for Computer Hobbyists</a>
+<a href="https://computergeeks.herokuapp.com/">Website for Computer Hobbyists</a>
 
 • Users can start their own accounts, post custom PC configurations, delete them, and leave comments
 
