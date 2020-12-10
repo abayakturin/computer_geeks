@@ -15,7 +15,7 @@ var commentRoutes    = require("./routes/comments"),
     computerRoutes = require("./routes/computers"),
     indexRoutes      = require("./routes/index")
 
-var dbString = "mongodb+srv://admin:admin@computergeeks.9hdzz.mongodb.net/computers?retryWrites=true&w=majority";
+var dbString = "db connection string";
 
 mongoose.connect(dbString, { useNewUrlParser: true });
 
@@ -54,6 +54,6 @@ app.listen(process.env.PORT, process.env.IP, function(){
    console.log("The Computer Geeks Server Has Started!");
 });
 
-var listener = app.listen(8888, function(){
-    console.log('Listening on port ' + listener.address().port); //Listening on port 8888
-});
+// var listener = app.listen(8888, function(){
+//     console.log('Listening on port ' + listener.address().port); //Listening on port 8888
+// });
