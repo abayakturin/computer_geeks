@@ -15,7 +15,7 @@ var commentRoutes    = require("./routes/comments"),
     computerRoutes = require("./routes/computers"),
     indexRoutes      = require("./routes/index")
 
-var dbString = "mongodb+srv://admin:admin@computergeeks.9hdzz.mongodb.net/computers?retryWrites=true&w=majority";
+var dbString = "db connectinon string";
 
 mongoose.connect(dbString, { useNewUrlParser: true });
 
