@@ -1,39 +1,39 @@
 <% include ../partials/header %>
 <div class="container">
     <div class="row">
-        <h1 style="text-align: center">Edit <%= campground.name %></h1>
+        <h1 style="text-align: center">Edit <%= computer.name %></h1>
         <div style="width: 30%; margin: 25px auto;">
-            <form action="/computers/<%= campground._id %>?_method=PUT" method="POST">
+            <form action="/computers/<%= computer._id %>?_method=PUT" method="POST">
                 <div class="form-group">
-                    <input class="form-control" type="text" name="campground[name]" value="<%= campground.name %>">
+                    <input class="form-control" type="text" name="computer[name]" value="<%= computer.name %>">
                 </div>
                 <div class="form-group">
-                    <input class="form-control" type="text" name="campground[price]" value="<%= campground.price %>">
+                    <input class="form-control" type="text" name="computer[price]" value="<%= computer.price %>">
                 </div>
                 <div class="form-group">
-                    <input class="form-control" type="text" name="campground[image]" value="<%= campground.image %>">
+                    <input class="form-control" type="text" name="computer[image]" value="<%= computer.image %>">
                 </div>
                 <div class="form-group">
-                    <input class="form-control" type="text" name="campground[description]" value="<%= campground.description %>">
+                    <input class="form-control" type="text" name="computer[description]" value="<%= computer.description %>">
                 </div>
                 
                 <div class="form-group">
-                    <input class="form-control" type="text" name="campground[processor]" value="<%= campground.processor %>">
+                    <input class="form-control" type="text" name="computer[processor]" value="<%= computer.processor %>">
                 </div>
                 <div class="form-group">
-                    <input class="form-control" type="text" name="campground[motherboard]" value="<%= campground.motherboard %>">
+                    <input class="form-control" type="text" name="computer[motherboard]" value="<%= computer.motherboard %>">
                 </div>
                 <div class="form-group">
-                    <input class="form-control" type="text" name="campground[video]" value="<%= campground.video %>">
+                    <input class="form-control" type="text" name="computer[video]" value="<%= computer.video %>">
                 </div>
                 <div class="form-group">
-                    <input class="form-control" type="text" name="campground[ram]" value="<%= campground.ram %>">
+                    <input class="form-control" type="text" name="computer[ram]" value="<%= computer.ram %>">
                 </div>
                 <div class="form-group">
-                    <input class="form-control" type="text" name="campground[memory]" value="<%= campground.memory %>">
+                    <input class="form-control" type="text" name="computer[memory]" value="<%= computer.memory %>">
                 </div>
                 <div class="form-group">
-                    <input class="form-control" type="text" name="campground[power]" value="<%= campground.power %>">
+                    <input class="form-control" type="text" name="computer[power]" value="<%= computer.power %>">
                 </div>
                 
                 <div class="form-group">

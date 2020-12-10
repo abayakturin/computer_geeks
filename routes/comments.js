@@ -1,26 +1,26 @@
 var express = require("express");
 var router  = express.Router({mergeParams: true});
-var Campground = require("../models/computer");
+var Computer = require("../models/computer");
 var Comment = require("../models/comment");
 var middleware = require("../middleware");
 
 //Comments New
 router.get("/new",middleware.isLoggedIn, function(req, res){
-    // find campground by id
+    // find computer by id
     console.log(req.params.id);
-    Campground.findById(req.params.id, function(err, campground){
+    Computer.findById(req.params.id, function(err, computer){
         if(err){
             console.log(err);
         } else {
-             res.render("comments/new", {campground: campground});
+             res.render("comments/new", {computer: computer});
         }
     })
 });
 
 //Comments Create
 router.post("/",middleware.isLoggedIn,function(req, res){
-   //lookup campground using ID
-   Campground.findById(req.params.id, function(err, campground){
+   //lookup computer using ID
+   Computer.findById(req.params.id, function(err, computer){
        if(err){
            console.log(err);
            res.redirect("/computers");
@@ -35,11 +35,11 @@ router.post("/",middleware.isLoggedIn,function(req, res){
                comment.author.username = req.user.username;
                //save comment
                comment.save();
-               campground.comments.push(comment);
-               campground.save();
+               computer.comments.push(comment);
+               computer.save();
                console.log(comment);
                req.flash("success", "Successfully added  a comment");
-               res.redirect('/computers/' + campground._id);
+               res.redirect('/computers/' + computer._id);
            }
         });
        }
@@ -52,7 +52,7 @@ router.get("/:comment_id/edit", middleware.checkCommentOwnership, function(req, 
       if(err){
           res.redirect("back");
       } else {
-        res.render("comments/edit", {campground_id: req.params.id, comment: foundComment});
+        res.render("comments/edit", {computer_id: req.params.id, comment: foundComment});
       }
    });
 });
